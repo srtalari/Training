@@ -1,0 +1,34 @@
+﻿import java.io.*;
+import java.util.*;
+
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ */
+
+class Solution 
+{
+public static void printPascal(int n) 
+{ 
+    for(int line = 1; line <= n; line++) 
+    { 
+          
+    int C=1;
+    for(int i = 1; i <= line; i++) 
+    {  
+       
+        System.out.print(C+" "); 
+        C = C * (line - i) / i;  
+    } 
+    System.out.println(); 
+    } 
+} 
+  
+
+public static void main (String[] args) { 
+    int n = 4; 
+    printPascal(n); 
+}  
+} 
