@@ -1,0 +1,48 @@
+
+?
+Solving same problem using Java 8:
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class MaxScore {
+    public static String s[][] = {{"jerry","65"},
+            {"bob","91"}, {"jerry","23"}, {"Eric","83"}};
+    public static void main(String[] args) {
+         List arrayOfLists = Arrays.asList(s);
+
+         List students = arrayOfLists.stream().map(s-&gt;new Student(s)).collect(Collectors.toList());
+         Optional studentWithMaxScore = students.stream().max(Comparator.comparing(Student::getScore));
+
+         System.out.println(studentWithMaxScore.get().getScore());
+    }
+
+}
+class Student{
+
+    private final String name;
+    private final int score;
+
+    public Student(String[] s) {
+        String name = s[0];
+        String score = s[1];
+        this.name = name;
+        if(score.matches("-?\\d+(\\.\\d+)?")) {
+            this.score = Integer.parseInt(score);
+        }
+        else {
+            this.score = 0;
+        }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+}

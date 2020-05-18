@@ -1,0 +1,36 @@
+package com.cg.demo;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class PanagramDemo {
+
+	public static void main(String[] args) {
+
+		String s="The quick brown fox jumps over the lazy dog";
+		
+		Set<Character> chars=new HashSet<>();
+		
+		s=s.toLowerCase();
+		s=s.replaceAll("[ \\.,!]", "");
+		
+		//System.out.println(s);
+	
+		
+		// To add all the characters in the array
+	for(char c:s.toCharArray()) {
+		chars.add(c);
+	}
+	
+	if(chars.size()==26) {
+		
+		System.out.println("It is Panagram");
+	}
+	else {
+		
+		System.out.println("It is not Panagram");
+	}
+
+	}
+
+}
