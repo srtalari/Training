@@ -1,0 +1,46 @@
+package org.cap.demo;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class RemoveDuplicates {
+
+	public static void main(String[] args) {
+		
+	String s ="Good day day bye bye";
+	
+	String[] sArr=s.split(" ");
+	
+	
+	// to preserve the order of the elements we are using LinkedHashSet
+	
+	Set<String> mySet=new LinkedHashSet<String>();
+	
+	// to iterate over the array and store in myset
+	
+	for(String x:sArr)
+	{
+		mySet.add(x);
+	}
+	
+	
+	//To print elements from the set we use Iterator
+	
+	 Iterator<String> itr=mySet.iterator();
+	 
+	 while(itr.hasNext()) {
+		 
+		 System.out.print(itr.next()+ " ");
+	 }
+	
+		
+		
+	}
+
+}
+   

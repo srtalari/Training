@@ -1,0 +1,55 @@
+Question:1
+===========
+Remove the duplicate words from the given Sentence.
+
+Ex:
+Input: Good day day bye bye 
+output: Good day bye
+
+input: greet the day user greet good day
+output:greet the day user good
+
+Question:2
+===========
+Print all Armstrong number between 1 to 1000.
+
+An Armstrong number is a n-digit number that is equal to the sum of nth power of its digits. For example,
+6 = 61 = 6
+371 = 33 + 73 + 13 = 371
+
+Question:3
+===========
+Check the given String is Anagram or Not.
+
+Ex:
+god - dog
+cat - act
+angle - glean
+arc - car
+tar - rat
+Fourth of July = Joyful Fourth
+The eyes = They see
+
+
+Question:4
+===========
+Find out the numerology number for the given name as mentioned below:
+
+Each alphabet represented with one number as given : 
+A,I,J,Q,Y - 1
+B,K,R-2
+C,G,L,S - 3
+D,M,T - 4
+E,H,N,X -5
+U,V,W-6
+O,Z-7
+F-P-8
+
+If input String is ""S. KANAPATHY"" then output should be 4.
+Ex:
+S. KANAPATHY ==> 3+2+1+5+1+8+1+4+5+1=31 (3+1) = 4
+
+
+Question:5
+================
+Write a program to find first non-repeating character from a input string

@@ -1,0 +1,23 @@
+package org.cap.demo;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class AnagramDemo {
+
+	public static void main(String[] args) {
+		
+		String s1="god";
+		String s2="dog";
+		
+		List<Character> charList=s1.chars().mapToObj(e->(char)e).sorted().collect(Collectors.toList());
+		List<Character> charlist1=s2.chars().mapToObj(e->(char)e).sorted().collect(Collectors.toList());
+		if(charList.containsAll(charlist1)){
+			System.out.println("given are anagram");
+		}
+		else {
+			System.out.println("given not anagram");
+		}
+		
+	}
+}
